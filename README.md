@@ -1,3 +1,5 @@
 # Log Finder
 
-Gives me a quick way to find the logs given a Raider IO URL. Especially useful if I want to quickly find out people's Mythic+ damage parses.
+Gives a quick way to find the logs given a Raider IO URL. Especially useful at quickly finding out people's Mythic+ damage parses.
+
+![UI-screenshot.jpeg](UI-screenshot.jpeg)
