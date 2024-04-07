@@ -2,6 +2,7 @@ import React from "react";
 import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
+import TextField from "@mui/material/TextField";
 
 import styles from "./App.module.scss";
 
@@ -16,7 +17,18 @@ function App() {
         </Toolbar>
       </AppBar>
       <div className={styles.container}>
-        <div>Paste the Raider.IO profile URL below</div>
+        <TextField
+          autoFocus
+          className={styles.raiderIOInput}
+          color="info"
+          focused
+          fullWidth
+          id="outlined-basic"
+          label="Raider.IO URL"
+          placeholder="Paste the Raider.IO URL"
+          type="url"
+          variant="outlined"
+        />
       </div>
     </div>
   );

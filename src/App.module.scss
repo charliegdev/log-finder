@@ -29,5 +29,14 @@ a {
 }
 
 .container {
-  margin: 0 100px;
+  margin: 50px 100px;
+}
+
+.raiderIOInput {
+  :global(.MuiInputBase-input) {
+    color: white;
+    ::placeholder {
+      color: white;
+    }
+  }
 }
