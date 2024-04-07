@@ -26,7 +26,7 @@ describe("getRaidDamageURL", () => {
     };
 
     const expectedUrl =
-      "https://www.warcraftlogs.com/character/blackwater-raiders/us/Lilith#"; // Updated
+      "https://www.warcraftlogs.com/character/us/blackwater-raiders/Lilith#"; // Updated
     const result = getRaidDamageURL(characterInfo);
 
     expect(result).toBe(expectedUrl);
