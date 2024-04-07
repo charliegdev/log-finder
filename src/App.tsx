@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import AppBar from "@mui/material/AppBar";
+import Button from "@mui/material/Button";
+import ButtonGroup from "@mui/material/ButtonGroup";
+import TextField from "@mui/material/TextField";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
-import TextField from "@mui/material/TextField";
 import { extractCharacterInfo } from "./utils/extractCharacterInfo";
 import { getRaidDamageURL, getMPlusDamageURL } from "./utils/getLogURLs";
 
@@ -41,9 +43,23 @@ function App() {
           type="url"
           variant="outlined"
         />
-        {raidDamageURL}
-        <br />
-        {mPlusDamageURL}
+        <ButtonGroup
+          classes={{ root: styles.buttonGroup }}
+          variant="contained"
+          aria-label="Basic button group"
+        >
+          <Button href={mPlusDamageURL} target="_blank" rel="noreferrer">
+            See M+ Damage
+          </Button>
+          <Button
+            color="secondary"
+            href={raidDamageURL}
+            target="_blank"
+            rel="noreferrer"
+          >
+            See Raid Damage
+          </Button>
+        </ButtonGroup>
       </div>
     </div>
   );
