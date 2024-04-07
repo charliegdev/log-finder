@@ -1,4 +1,11 @@
-export const extractName = (raiderioUrl: string): string | null => {
+export interface CharacterInfo {
+  region: string;
+  realm: string;
+  characterName: string;
+}
+export const extractCharacterInfo = (
+  raiderioUrl: string,
+): CharacterInfo | null => {
   try {
     const url = new URL(raiderioUrl);
 
@@ -12,7 +19,11 @@ export const extractName = (raiderioUrl: string): string | null => {
       const characterName = pathParts[4];
 
       if (region && realm && characterName) {
-        return `${region}/${realm}/${characterName}`;
+        return {
+          region,
+          realm,
+          characterName,
+        };
       } else {
         return null;
       }
